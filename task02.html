@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task02</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+        var x = parseInt($('#imagen').css('left'));
+        var y = parseInt($('#imagen').css('top'));
+        $("body").keydown(function(e) {
+          switch (e.keyCode){
+           case 37: //left
+            x = x - 10;
+            break
+           case 38: //up
+            y = y - 10 ;
+            break
+           case 39: //right
+            x = x + 10;
+            break
+           case 40: //down
+            y = y + 10;
+            break
+          };
+          $('#imagen').css('left', x + 'px');
+          $('#imagen').css('top', y + 'px');
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>Tarea segunda (a)</h1>
+    <a href="index.html">Regresar</a>
+    <img src="images/estrella_nuevo.png" id="imagen" style="position:absolute; left:100px; top: 100px;">
+  </body>
+</html>
